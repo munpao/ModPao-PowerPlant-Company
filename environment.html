@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Environment — ModPao Power</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<style>
+.pollutant{display:grid;grid-template-columns:180px 90px 1fr 90px;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+.pollutant .name{font-weight:600;font-size:14px}
+.pollutant .val{font:600 15px/1 ui-monospace,Consolas,monospace;color:var(--blue-d)}
+.pollutant .limit{font:600 13px/1 ui-monospace,Consolas,monospace;color:var(--mut);text-align:right}
+.pollutant .track{height:8px;background:var(--line);border-radius:2px;overflow:hidden;position:relative}
+.pollutant .fill{position:absolute;inset:0 auto 0 0;background:var(--ok)}
+.pollutant .fill.warn{background:var(--warn)}
+@media(max-width:720px){.pollutant{grid-template-columns:1fr}.pollutant .limit{text-align:left}}
+.pollutant .headr{border-top:0}
+</style></head><body>
+
+<header class="site"><div class="bar">
+  <a class="word" href="/index.html">ModPao<span class="sub">Power · Lampang</span></a>
+  <nav class="site">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About us</a>
+    <a href="/plant.html">The plant</a>
+    <a href="/generation.html">Generation</a>
+    <a href="/fuel.html">Fuel supply</a>
+    <a class="current" href="/environment.html">Environment</a>
+    <a href="/buy.html">Buy power</a>
+    <a href="/news.html">News</a>
+  </nav>
+  <a class="pill" href="/buy.html">Request a quote</a>
+</div></header>
+
+<div class="phero">
+  <div class="wrap">
+    <div class="eyebrow">Environment</div>
+    <h1>What the CEMS sees — published, not summarised.</h1>
+    <p class="lede">Emissions to air, water use, ash return and the community-facing
+    metrics we hold ourselves to. Continuous emissions monitoring runs on both stacks,
+    with data validated by an independent lab quarterly.</p>
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="wrap"><div class="row four">
+    <div class="cell"><div class="n">18</div><div class="l">mg/m³ particulate, annual average · limit 120</div></div>
+    <div class="cell"><div class="n">412 kt</div><div class="l">CO₂ avoided YTD (vs. baseline)</div></div>
+    <div class="cell"><div class="n">18,000 t</div><div class="l">Ash returned to suppliers, 2025</div></div>
+    <div class="cell"><div class="n">0</div><div class="l">Reportable environmental incidents, 2025</div></div>
+  </div></div>
+</div>
+
+<section class="pane">
+  <div class="wrap">
+    <h2>Stack emissions vs. permit</h2>
+    <p class="lede">Annual average per pollutant, as reported to the provincial EIA
+    monitoring office. The "% headroom" column shows how much slack the plant runs
+    against its own permit limit — the retrofit of 2021 was specifically to widen this
+    margin on particulates.</p>
+    <div style="margin-top:30px">
+      <div class="pollutant" style="border-top:1px solid var(--line);color:var(--mut);font:600 11px/1 Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase">
+        <div>Pollutant</div><div>Avg</div><div>Headroom</div><div style="text-align:right">Permit</div>
+      </div>
+      <div class="pollutant">
+        <div class="name">Particulate matter</div>
+        <div class="val">18 mg/m³</div>
+        <div class="track"><span class="fill" style="width:85%"></span></div>
+        <div class="limit">120 mg/m³</div>
+      </div>
+      <div class="pollutant">
+        <div class="name">Nitrogen oxides (NOx)</div>
+        <div class="val">142 mg/m³</div>
+        <div class="track"><span class="fill warn" style="width:29%"></span></div>
+        <div class="limit">200 mg/m³</div>
+      </div>
+      <div class="pollutant">
+        <div class="name">Sulphur dioxide (SO₂)</div>
+        <div class="val">24 mg/m³</div>
+        <div class="track"><span class="fill" style="width:60%"></span></div>
+        <div class="limit">60 mg/m³</div>
+      </div>
+      <div class="pollutant">
+        <div class="name">Carbon monoxide</div>
+        <div class="val">88 mg/m³</div>
+        <div class="track"><span class="fill" style="width:88%"></span></div>
+        <div class="limit">740 mg/m³</div>
+      </div>
+      <div class="pollutant">
+        <div class="name">Opacity</div>
+        <div class="val">4%</div>
+        <div class="track"><span class="fill" style="width:60%"></span></div>
+        <div class="limit">10%</div>
+      </div>
+    </div>
+    <p style="margin-top:22px;font-size:13px;color:var(--mut)">Headroom = (permit − average) ÷ permit. NOx runs closer to permit than the other pollutants and is the primary target of the next combustion-tuning campaign.</p>
+  </div>
+</section>
+
+<section class="pane band">
+  <div class="wrap"><div class="grid2 center rev">
+    <div class="ph"><img src="/img/rice-husk.jpg" alt="Rice husk residue"></div>
+    <div>
+      <div class="eyebrow">Ash return</div>
+      <h2>Closing the loop, one batch at a time.</h2>
+      <p>The plant produces roughly 18,000 tonnes of bottom and fly ash a year. All of
+      it — no exceptions — goes back to registered fuel suppliers, free of charge, as a
+      potassium and silica soil amendment. Each batch ships with a lab analysis so the
+      supplier can decide where and how to apply it.</p>
+      <p>This is the closed-loop story the plant was built to tell: residue leaves the
+      farm as fuel, comes back as amendment, instead of leaving the air as smoke.</p>
+      <ul class="dlist">
+        <li><span>Ash produced, 2025</span><b>18,000 tonnes</b></li>
+        <li><span>Ash returned to suppliers</span><b>100%</b></li>
+        <li><span>Lab analysis per batch</span><b>Yes</b></li>
+        <li><span>Batches, 2025</span><b>412</b></li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<section class="pane">
+  <div class="wrap">
+    <h2>Water &amp; waste</h2>
+    <p class="lede">Closed-circuit cooling keeps water intake below the seasonal river
+    licence. Wastewater is treated on site and discharged under a monitored permit.</p>
+    <table class="data">
+      <thead><tr><th>Stream</th><th>Volume, 2025</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Cooling water make-up</td><td class="num">1.2 million m³</td><td>62% of licensed intake</td></tr>
+        <tr><td>Process water treated on site</td><td class="num">840,000 m³</td><td>Compliant, discharge permit MTL-2023-08</td></tr>
+        <tr><td>Boiler blowdown (recovered)</td><td class="num">31,000 m³</td><td>Fed back to demin plant</td></tr>
+        <tr><td>Dry-season community supply</td><td class="num">4,600 m³</td><td>Provided free to four villages</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="pane band">
+  <div class="wrap">
+    <h2>Continuous emissions monitoring</h2>
+    <p class="lede">CEMS instrument chain, calibration schedule and quarterly independent
+    validation. Data is streamed to the historian, mirrored to the provincial monitoring
+    office, and released weekly to the community grievance line.</p>
+    <div class="cards">
+      <div>
+        <div class="eyebrow" style="margin:0">Stack A</div>
+        <h3>Unit 1</h3>
+        <p>PM, NOx, SO₂, CO, O₂, opacity. Calibrated monthly. Independent validation
+        Q1/Q2/Q3/Q4. Uptime 2025: 99.4%.</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin:0">Stack B</div>
+        <h3>Unit 2</h3>
+        <p>PM, NOx, SO₂, CO, O₂, opacity. Calibrated monthly. Independent validation
+        Q1/Q2/Q3/Q4. Uptime 2025: 99.1%.</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin:0">Ambient</div>
+        <h3>Gate station</h3>
+        <p>PM10, PM2.5, wind direction. Displayed publicly at the gate office and
+        reported to the sub-district administrations twice a month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pane">
+  <div class="wrap">
+    <div class="cta-banner">
+      <div>
+        <h3>CEMS quarterly bulletin</h3>
+        <p>The full validated dataset is published each quarter as a PDF, alongside the
+        provincial monitoring return. Independent lab reports are appended.</p>
+      </div>
+      <a class="pill" href="/news.html">Read the latest bulletin</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="grid3">
+      <div><h4>Head office</h4><p>18th Floor, Sathorn Tower<br>Sathorn Road, Bangkok 10120<br>+66 2 000 0000<br>info@modpao-powerplant.com</p></div>
+      <div><h4>The plant</h4><p>199 Moo 4, Mae Tha District<br>Lampang 52150<br>+66 54 000 000<br>Gate office open 08:00–17:00</p></div>
+      <div><h4>Work with us</h4><p>Ops, maintenance and fuel-supply roles are posted at the gate office and on this site. We hire locally first.<br><br><a href="/team.html">Meet the team →</a></p></div>
+    </div>
+    <div class="fbottom">© ModPao Power (fictional, lab use only)</div>
+  </div>
+</footer>
+</body></html>
