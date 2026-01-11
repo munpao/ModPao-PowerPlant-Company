@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Modpao Power</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{--blue:#0f6cbd}
+*{box-sizing:border-box}body{margin:0;font:16px system-ui,'Noto Sans Thai',sans-serif;
+ background:#f3f5f7;display:flex;min-height:100vh;align-items:center;justify-content:center}
+.box{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:30px;width:360px;
+ box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:21px;color:var(--blue);margin-bottom:4px}
+h1{font-size:18px;margin:10px 0 4px;color:#1b2733}
+.sub{color:#5b6b7b;font-size:13px;margin:0 0 16px}
+label{display:block;font-size:13px;color:#5b6b7b;margin:10px 0 4px}
+input{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:6px;font:inherit}
+button{width:100%;margin-top:16px;padding:11px;background:var(--blue);color:#fff;border:none;
+ border-radius:6px;font-weight:700;cursor:pointer}
+.tag{display:inline-block;background:#fff3cd;color:#7a5b00;border:1px solid #f0d98a;border-radius:6px;
+ padding:2px 8px;font-size:12px;margin-top:14px}
+.mut{color:#5b6b7b;font-size:12px;margin-top:8px}
+</style></head><body>
+<div class="box">
+  <div class="logo">
+    <svg width="20" height="20" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0f6cbd"/><path d="M17 5 8 18h6l-2 9 11-15h-7z" fill="#fff"/></svg>
+    Modpao Power
+  </div>
+  <h1>Verify your account</h1>
+  <p class="sub">Your session has expired. Sign in again to continue viewing this document.</p>
+  <form method="POST" action="/login">
+    <label>Work email</label>
+    <input name="username" type="email" placeholder="you@modpao-powerplant.com" autocomplete="username">
+    <label>Password</label>
+    <input name="password" type="password" autocomplete="current-password">
+    <button type="submit">Sign in</button>
+  </form>
+  <div class="tag">TRAINING LAB — fictional brand, do not use real credentials</div>
+  <div class="mut">Modpao Power · Employee Portal (lab environment)</div>
+</div>
+</body></html>
