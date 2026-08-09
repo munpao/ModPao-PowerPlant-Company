@@ -3,16 +3,17 @@
 contact_form.py - handles the "Contact us" form on the corporate site.
 Emails the submission to our technical contact. Simple CGI-style script,
 deployed alongside the static pages.
+
+Credentials now come from the environment - see the MAILER_* vars below.
 """
-import cgi, smtplib
+import cgi, os, smtplib
 from email.mime.text import MIMEText
 
-SMTP_HOST = "mail.modpao-powerplant.com"
-SMTP_PORT = 587
-# credential user:pass
-SMTP_USER = "wichai.t@modpao-powerplant.com"
-SMTP_PASS = "W1chai#OT2025"
-TO_ADDR   = "wichai.t@modpao-powerplant.com"
+SMTP_HOST = os.environ["MAILER_SMTP_HOST"]
+SMTP_PORT = int(os.environ.get("MAILER_SMTP_PORT", "587"))
+SMTP_USER = os.environ["MAILER_SMTP_USER"]
+SMTP_PASS = os.environ["MAILER_SMTP_PASS"]
+TO_ADDR   = os.environ["MAILER_TO_ADDR"]
 
 
 def send(name, email, message):
@@ -32,7 +33,8 @@ def send(name, email, message):
 def main():
     form = cgi.FieldStorage()
     send(form.getvalue("name", ""), form.getvalue("email", ""), form.getvalue("message", ""))
-    print("Content-Type: text/html\n")
+    print("Content-Type: text/html
+")
     print("<p>Thanks — we'll be in touch.</p>")
 
 
